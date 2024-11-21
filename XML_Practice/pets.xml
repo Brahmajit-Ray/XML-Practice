@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pets SYSTEM "pets.dtd">
+
+<pets>
+  <pet type="dog">
+    <name>Simba</name>
+    <breed>Alsatian</breed>
+    <age>8</age>
+    <owner>
+      <oname>Promit</oname>
+      <age>34</age>
+    </owner>
+    
+    <owner>
+      <oname>Nini</oname>
+      <age>32</age>
+    </owner>
+  </pet>
+  
+  <pet type="dog">
+    <name>Buzo</name>
+    <breed>Beagle</breed>
+    <age>7</age>
+    <owner married="Yes">
+      <oname>Priyanka</oname>
+      <age>32</age>
+      <partner>Ronnie</partner>
+    </owner>
+  </pet>
+  
+  <pet type="street dog">
+    <name>Jio</name>
+    <breed>Street</breed>
+    <age>2</age>
+    <owner married="No">
+      <oname>Babai</oname>
+      <age>20</age>
+    </owner>
+  </pet>
+  
+</pets>

@@ -1,0 +1,14 @@
+<!ELEMENT pets (pet*)>
+
+<!ELEMENT pet (name,breed,age,owner+)>
+<!ATTLIST pet type CDATA #REQUIRED>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT breed (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+
+<!ELEMENT owner (oname,age,partner?)>
+<!ATTLIST owner married (Yes|No) "No">
+
+<!ELEMENT oname (#PCDATA)>
+<!ELEMENT partner (#PCDATA)>
