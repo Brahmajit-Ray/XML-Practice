@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="drivers">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" name="driver">
+          <xs:complexType>
+            <xs:sequence>
+            
+              <!--<xs:choice maxOccurs="unbounded">-->
+                <xs:element name="name" type="xs:string"/>
+                
+                <xs:element name="curr_team">
+                  <xs:complexType>
+                    <xs:simpleContent>
+                      <xs:extension base="xs:string">
+                        <xs:attribute name="principal" type="xs:string" use="optional"/>
+                      </xs:extension>
+                    </xs:simpleContent>
+                  </xs:complexType>
+                </xs:element>
+                
+                <xs:element name="ranking" type="xs:unsignedByte"/>
+                
+                <xs:element minOccurs="0" name="past_teams">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element maxOccurs="unbounded" name="team">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="t_name" type="xs:string"/>
+                            <xs:element name="owner" type="xs:string"/>
+                            <xs:element minOccurs="0" name="team_level" type="xs:string"/>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                  </xs:complexType>
+                </xs:element>
+                        
+                <xs:element minOccurs="0" name="future_team">
+                  <xs:complexType>
+                    <xs:sequence>
+                      <xs:element minOccurs="1" maxOccurs="1" name="team">
+                        <xs:complexType>
+                          <xs:sequence>
+                            <xs:element name="t_name" type="xs:string"/>
+                            <xs:element name="owner" type="xs:string"/>
+                            <xs:element minOccurs="0" name="team_level" type="xs:string"/>
+                          </xs:sequence>
+                        </xs:complexType>
+                      </xs:element>
+                    </xs:sequence>
+                    <xs:attribute name="principal" type="xs:string" use="required"/>
+                  </xs:complexType>
+                </xs:element>
+                
+            </xs:sequence>
+            <xs:attribute name="id" type="xs:string" use="required"/>
+            <xs:attribute name="rich" type="xs:string" use="optional"/>
+            <xs:attribute name="married" type="xs:string" default="No"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
+            
+

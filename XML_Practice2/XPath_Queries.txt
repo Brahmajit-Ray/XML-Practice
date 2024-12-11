@@ -1,0 +1,129 @@
+ 1519  xmlstarlet sel -t -v "//driver/name[text()='Sergio Perez']" f1.xml && echo
+ 1520  xmlstarlet sel -t -v "//driver/name" f1.xml && echo
+ 1521  xmlstarlet sel -t -v "//name" f1.xml && echo
+ 1522  xmlstarlet sel -t -v "//driver[@rich="Yes"]" f1.xml && echo
+ 1523  xmlstarlet sel -t -v "//driver[@rich='Yes']" f1.xml && echo
+ 1524  xmlstarlet sel -t -v "//driver[@rich='Yes']/past_teams" f1.xml && echo
+ 1525  xmlstarlet sel -t -v "//driver[@rich='Yes']//t_name" f1.xml && echo
+ 1526  xmlstarlet sel -t -v "//driver[ranking<7]/name" f1.xml && echo
+ 1527  xmlstarlet sel -t -v "//driver[ranking<7]/name[1]" f1.xml && echo
+ 1528  xmlstarlet sel -t -v "//driver[ranking<7]/name[1]/future_team" f1.xml && echo
+ 1529  xmlstarlet sel -t -v "//driver[ranking<7]/future_team" f1.xml && echo
+ 1530  xmlstarlet sel -t -v "//driver[ranking<7]/future_team/owner" f1.xml && echo
+ 1531  xmlstarlet sel -t -v "//driver[ranking<7]/future_team//owner" f1.xml && echo
+ 1532  xmlstarlet sel -t -v "//driver[ranking<7]/future_team//t_name" f1.xml && echo
+ 1533  xmlstarlet sel -t -v "//driver[attribute::ranking<7]/future_team//t_name" f1.xml && echo
+ 1534  xmlstarlet sel -t -v "//driver[attribute::rich='Yes']/future_team//t_name" f1.xml && echo
+ 1535  xmlstarlet sel -t -v "//driver[attribute::rich="Yes"]/future_team//t_name" f1.xml && echo
+ 1536  xmlstarlet sel -t -v "//driver[attribute::rich='Yes']/future_team//t_name" f1.xml && echo
+ 1537  xmlstarlet sel -t -v "//driver[attribute::married='Yes']/name" f1.xml && echo
+ 1538  xmlstarlet sel -t -v "//driver[attribute::married='Yes']/name[2]" f1.xml && echo
+ 1539  xmlstarlet sel -t -v "//driver[attribute::married='Yes']/name[1]" f1.xml && echo
+ 1540  xmlstarlet sel -t -v "//driver[attribute::married='Yes']/future_team" f1.xml && echo
+ 1541  xmlstarlet sel -t -v "//driver[@ranking=1]/future_team/@principal" f1.xml && echo
+ 1542  xmlstarlet sel -t -v "//driver[attribute::married='Yes']/name"[1] f1.xml && echo
+ 1543  xmlstarlet sel -t -v "//driver[@married='Yes'][1]" f1.xml && echo
+ 1544  xmlstarlet sel -t -v "//driver[@married='Yes']//past_teams[1]" f1.xml && echo
+ 1545  xmlstarlet sel -t -v "//driver[@married='Yes']//past_teams/team[1]" f1.xml && echo
+ 1546  xmlstarlet sel -t -v "//driver[@married='Yes']//past_teams/team[1]/owner" f1.xml && echo
+ 1547  xmlstarlet sel -t -v "//driver[@married='Yes']//past_teams/team[2]/owner" f1.xml && echo
+ 1548  xmlstarlet sel -t -v "//driver[@married='Yes']//past_teams/team[3]/owner" f1.xml && echo
+ 1549  xmlstarlet sel -t -v "//name[not(contains(text(),'Perez'))]" f1.xml && echo
+ 1550  xmlstarlet sel -t -v "//name[contains(text(),'Perez')]" f1.xml && echo
+ 1551  xmlstarlet sel -t -v "//past_teams/team[t_name="McLaren]" f1.xml && echo
+ 1552  xmlstarlet sel -t -v "//name[contains(text(),'Perez')]" f1.xml && echo
+ 1553* xmlstarlet sel -t -v "//past_teams/" f1.xml && echo
+ 1554  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']" f1.xml && echo
+ 1555  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']." f1.xml && echo
+ 1556  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/." f1.xml && echo
+ 1557  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/.." f1.xml && echo
+ 1558  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/..." f1.xml && echo
+ 1559  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/../name" f1.xml && echo
+ 1560  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/owner" f1.xml && echo
+ 1561  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/parent::ranking" f1.xml && echo
+ 1562  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/parent" f1.xml && echo
+ 1563  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/parent::driver/name" f1.xml && echo
+ 1564  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/parent::past_teams" f1.xml && echo
+ 1565  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/parent::past_teams/parent::driver" f1.xml && echo
+ 1566  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/parent::past_teams/parent::driver/ranking" f1.xml && echo
+ 1567  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/parent::past_teams/parent::driver/(name|ranking)" f1.xml && echo
+ 1568  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/parent::past_teams/parent::driver/name|ranking" f1.xml && echo
+ 1569  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/parent::past_teams/parent::driver/name" f1.xml && echo
+ 1570  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/parent::past_teams/parent::driver/@rich" f1.xml && echo
+ 1571  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/parent::past_teams/parent::driver/@married" f1.xml && echo
+ 1572  xmlstarlet sel -t -v "//past_teams/team[t_name='McLaren']/parent::past_teams/parent::driver/@id" f1.xml && echo
+ 1573  xmlstarlet sel -t -v "//past_teams/team[t_name='Sauber']/parent::past_teams/parent::driver/@id" f1.xml && echo
+ 1574  xmlstarlet sel -t -v "//past_teams/team[t_name='Sauber']/parent::past_teams/parent::driver/@married" f1.xml && echo
+ 1575  xmlstarlet sel -t -v "//past_teams/team[t_name='Sauber']/parent::past_teams/parent::driver/curr_team" f1.xml && echo
+ 1576  xmlstarlet sel -t -v "//driver[@married]" f1.xml && echo
+ 1577  xmlstarlet sel -t -v "//driver[@married]/name" f1.xml && echo
+ 1578  xmlstarlet sel -t -v "//past_teams[count()>2]/../name" f1.xml && echo
+ 1579  xmlstarlet sel -t -v "//past_teams[count(*)>2]/../name" f1.xml && echo
+ 1580  xmlstarlet sel -t -v "//past_teams[count(*)>1]/../name" f1.xml && echo
+ 1581  xmlstarlet sel -t -v "//past_teams[count(*)>=1]/../name" f1.xml && echo
+ 1582  xmlstarlet sel -t -v "//driver[name='Sergio Perez']//team[last()]" f1.xml && echo
+ 1583  xmlstarlet sel -t -v "//driver[name='Sergio Perez']//team/*" f1.xml && echo
+ 1584  xmlstarlet sel -t -v "//driver[count(past_teams)>=1]/name" f1.xml && echo
+ 1585  xmlstarlet sel -t -v "//driver/name[.='Max Verstappen']" f1.xml && echo
+ 1586  xmlstarlet sel -t -v "//driver/name[.='Max Verstappen']/curr_team" f1.xml && echo
+ 1587  xmlstarlet sel -t -v "//driver[name[.='Max Verstappen']]/curr_team" f1.xml && echo
+ 1588  xmlstarlet sel -t -v "//curr_team[starts-with(.,"Red")]/../name f1.xml && echo
+ 1589  xmlstarlet sel -t -v "//curr_team[starts-with(.,'Red')]/../name" f1.xml && echo
+ 1590  xmlstarlet sel -t -v "//curr_team[contains(.,'Bull')]/../name" f1.xml && echo
+ 1591  xmlstarlet sel -t -v "//curr_team[contains(.,'err')]/../name" f1.xml && echo
+ 1592  xmlstarlet sel -t -v "//drivers[string-length(name)=12]/curr_team" f1.xml && echo
+ 1593  xmlstarlet sel -t -v "//drivers[string-length(name())=12]/curr_team" f1.xml && echo
+ 1594  xmlstarlet sel -t -v "//drivers/name[string-length(.)=12]" f1.xml && echo
+ 1595  xmlstarlet sel -t -v "string-length(//driver/name)" f1.xml && echo
+ 1596  python3
+ 1597  xmlstarlet sel -t -v "string-length(//driver[3]/name)" f1.xml && echo
+ 1598  xmlstarlet sel -t -v "string-length(//driver[2]/name)" f1.xml && echo
+ 1599  xmlstarlet sel -t -v "//driver/name[string-length(.)]" f1.xml && echo
+ 1600  xmlstarlet sel -t -v "//driver/name" f1.xml && echo
+ 1601  xmlstarlet sel -t -v "//driver[string-length(name)>13]" f1.xml && echo
+ 1602  xmlstarlet sel -t -v "//driver[string-length(name)=12]" f1.xml && echo
+ 1603  xmlstarlet sel -t -v "//driver[string-length(name)=12]/name" f1.xml && echo
+ 1604  xmlstarlet sel -t -v "//curr_team[ends-with(.,'Racing')]/../name" f1.xml && echo
+ 1605  xmlstarlet sel -t -v "//curr_team[substring(.string-length(.)-6)='Racing']/../name" f1.xml && echo
+ 1606  xmlstarlet sel -t -v "//curr_team[substring(.,string-length(.)-6)='Racing']/../name" f1.xml && echo
+ 1607  xmlstarlet sel -t -v "//curr_team[substring(. , string-length(.)-6)='Racing']/../name" f1.xml && echo
+ 1608  xmlstarlet sel -t -v "//curr_team[substring(. , string-length(.)-6)='Racing']" f1.xml && echo
+ 1609  xmlstarlet sel -t -v "//driver[string-length(name)=12]/name" f1.xml && echo
+ 1610  xmlstarlet sel -t -v "//driver[name='Carlos Sainz']/past_teams|future_team//t_name" f1.xml && echo
+ 1611  xmlstarlet sel -t -v "//driver[name='Carlos Sainz']/past_teams//t_name" f1.xml && echo
+ 1612  xmlstarlet sel -t -v "//driver[name='Carlos Sainz']/future_team//t_name" f1.xml && echo
+ 1613  xmlstarlet sel -t -v "//driver[name='Carlos Sainz']/past_teams|future_team//t_name" f1.xml && echo
+ 1614  xmlstarlet sel -t -v "//driver[name='Carlos Sainz']/(past_teams|future_team)//t_name" f1.xml && echo
+ 1615  xmlstarlet sel -t -v "//driver[name='Carlos Sainz']/(past_teams|future_team)" f1.xml && echo
+ 1616  xmlstarlet sel -t -v "//driver[2]/name" f1.xml && echo
+ 1617  xmlstarlet sel -t -v "//driver[2]/name/preceding-sibling::*/name" f1.xml && echo
+ 1618  xmlstarlet sel -t -v "//driver[2]/name/preceding-sibling::*" f1.xml && echo
+ 1619  xmlstarlet sel -t -v "//driver[2]/name/following-sibling::*" f1.xml && echo
+ 1620  xmlstarlet sel -t -v "//driver[2]/following-sibling::*" f1.xml && echo
+ 1621  xmlstarlet sel -t -v "//driver[2]/following-sibling::*/name" f1.xml && echo
+ 1622  xmlstarlet sel -t -v "//driver[2]/preceding-sibling::*/name" f1.xml && echo
+ 1623  xmlstarlet sel -t -v "//driver[3]/preceding-sibling::*/name" f1.xml && echo
+ 1624  xmlstarlet sel -t -v "//driver[3]/name/preceding::*/curr_team" f1.xml && echo
+ 1625  xmlstarlet sel -t -v "//driver[3]/name/preceding::*/name" f1.xml && echo
+ 1626  xmlstarlet sel -t -v "//driver[3]/name/ancestor::*/name" f1.xml && echo
+ 1627  xmlstarlet sel -t -v "//team[t_name='McLaren']/ancestor::*/name" f1.xml && echo
+ 1628  xmlstarlet sel -t -v "//past_teams/team[t_name='Sauber']/ancestor::*/curr_team" f1.xml && echo
+ 1629  xmlstarlet sel -t -v "//driver[name='Sergio Perez']/descendant::*/t_name" f1.xml && echo
+ 1630  xmlstarlet sel -t -v "//driver[name='Carlos Sainz']/descendant::*/t_name" f1.xml && echo
+ 1631  xmlstarlet sel -t -v "//driver[name='Carlos Sainz']/following::*/t_name" f1.xml && echo
+ 1632  xmlstarlet sel -t -v "//driver[name='Sergio Perez']/following::*/t_name" f1.xml && echo
+ 1633  xmlstarlet sel -t -v "//driver[position() mod 3=0]/name" f1.xml && echo
+ 1634  xmlstarlet sel -t -v "concat(//driver[name='Carlos Sainz']/descendant::*/t_name,'Hello')" f1.xml && echo
+ 1635  xmlstarlet sel -t -v "//driver[name='Carlos Sainz']/descendant::*/t_name" f1.xml && echo
+ 1636  xmlstarlet sel -t -v "translate(//driver[3]/name,'l','d')" f1.xml && echo
+ 1637  xmlstarlet sel -t -v "//driver[name=normalize-space(' Carlos Sainz ')]/curr_team" f1.xml && echo
+ 1638  xmlstarlet sel -t -v "//driver[name=' Carlos Sainz ']/curr_team" f1.xml && echo
+ 1639  xmlstarlet sel -t -v "//driver[name=normalize-space(' Carlos Sainz ')]/curr_team" f1.xml && echo
+ 1640  xmlstarlet sel -t -v "sum(string-length(//driver/name))" f1.xml && echo
+ 1641  xmlstarlet sel -t -v "sum(string-length(//driver[1]/name))" f1.xml && echo
+ 1642  xmlstarlet sel -t -v "//driver[1]/name" f1.xml && echo
+ 1643  xmlstarlet sel -t -v "string-length(//driver[1]/name)" f1.xml && echo
+ 1644  xmlstarlet sel -t -v "sum(string-length(//driver[1]/name),8)" f1.xml && echo
+ 1645  xmlstarlet sel -t -v "sum(//ranking)" f1.xml && echo
+ 1646  xmlstarlet sel -t -v "//past_teams[count(*)>=2]/ancestor::*/name" f1.xml && echo
+

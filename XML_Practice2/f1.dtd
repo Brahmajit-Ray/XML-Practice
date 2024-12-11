@@ -1,0 +1,26 @@
+<!ENTITY championship "F1 2024">
+
+<!ELEMENT drivers (driver*)>
+
+<!ELEMENT driver (name,curr_team,ranking,season?,past_teams?,future_team?)>
+<!ATTLIST driver 
+	married (Yes|No) "No"
+	rich CDATA #IMPLIED
+	id ID #REQUIRED>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT curr_team (#PCDATA)>
+<!ELEMENT ranking (#PCDATA)>
+<!ELEMENT season (#PCDATA)>
+
+<!ATTLIST curr_team principal CDATA #IMPLIED >
+<!ATTLIST team principal CDATA #IMPLIED >
+
+<!ELEMENT past_teams (team+)>
+<!ELEMENT team (t_name,owner,team_level?)>
+<!ELEMENT t_name (#PCDATA)>
+<!ELEMENT owner (#PCDATA)>
+<!ELEMENT team_level (#PCDATA)>
+
+<!ELEMENT future_team (team+)>
+<!ATTLIST future_team principal CDATA #IMPLIED>
+

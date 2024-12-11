@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--<!DOCTYPE drivers SYSTEM "f1.dtd">-->
+
+<drivers>
+  <driver id="D1" married="Yes" >
+    <name>Sergio Perez</name>
+    <curr_team principal="Christian Horner">Red Bull Racing</curr_team>
+    <ranking>8</ranking>
+    <!--<season>&championship;</season>-->
+    <past_teams>
+      <team>
+        <t_name>Racing Point</t_name>
+        <owner>Lawrence Stroll</owner>
+        <team_level>MidField</team_level>
+      </team>
+      
+      <team>
+        <t_name>Force India</t_name>
+        <owner>Vijay Mallya</owner>
+      </team>
+      
+      <team>
+        <t_name>Sauber</t_name>
+        <owner>Peter Sauber</owner>
+        <team_level>Last</team_level>
+      </team>
+    </past_teams>
+  </driver>
+  
+  <driver id="D2" married="Yes" >
+  
+    <name>Max Verstappen</name>
+    <curr_team principal="Christian Horner">Red Bull Racing</curr_team>
+    <ranking>1</ranking>
+    
+    <future_team principal="Christian Horner">
+      <team>
+        <t_name>Red Bull Racing</t_name>
+        <owner>Red Bull GmBH</owner>
+        <team_level>Championship Challengers</team_level>
+      </team>
+    </future_team>
+  </driver>
+  
+  <driver id="D3" rich="Yes">
+    <name>Carlos Sainz</name>
+    <curr_team>Ferrari</curr_team>
+    <ranking>5</ranking>
+    
+    <past_teams>
+      <team>
+        <t_name>McLaren</t_name>
+        <owner>McLaren Corp</owner>
+      </team>
+    </past_teams>
+    
+    <future_team principal="James Vowles">
+      <team>
+        <t_name>Williams</t_name>
+        <owner>Williams Racing</owner>
+        <team_level>MidField</team_level>
+      </team>
+    </future_team>
+  </driver>
+  
+</drivers>
+
+    
