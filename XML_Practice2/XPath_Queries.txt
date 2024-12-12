@@ -127,3 +127,11 @@
  1645  xmlstarlet sel -t -v "sum(//ranking)" f1.xml && echo
  1646  xmlstarlet sel -t -v "//past_teams[count(*)>=2]/ancestor::*/name" f1.xml && echo
 
+Validating DTDs and Schemas
+
+1470  xmllint --noout --dtdvalid f1.dtd f1.xml
+1471  xmllint --noout --schema f1.xsd f1.xml
+
+Executing XSLT
+
+1667 xsltproc --novalid f1.xsl f1.xml>f1.html
