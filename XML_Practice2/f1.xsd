@@ -20,7 +20,14 @@
                   </xs:complexType>
                 </xs:element>
                 
-                <xs:element name="ranking" type="xs:unsignedByte"/>
+                <xs:element name="ranking">
+                  <xs:simpleType>
+                    <xs:restriction base="xs:int">
+                      <xs:minInclusive value="1"/>
+                      <xs:maxInclusive value="20"/>
+                    </xs:restriction>
+                  </xs:simpleType>
+                </xs:element>
                 
                 <xs:element minOccurs="0" name="past_teams">
                   <xs:complexType>
